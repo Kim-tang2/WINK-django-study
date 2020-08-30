@@ -2,10 +2,10 @@
 {% load static %}
 {% block content %}
 <div class = "main-container">
-    <h1>this is post </h1>
-    
     <img src="{% static 'images/tang.jpeg' %}">
+    <h1>{{post.headline}}</h1>
+    <h4>{{post.sub_headline}}</h4>
 
-    <p>국민대학교 소프트웨어학부 17학번 김태훈입니다. 윙크의 기획차장입니다 ^0^. 악마같은 회장 때문에 참 힘드네요...</p>
+    <p>{{post.body|linebreaks}}</p>
 </div>
 {% endblock content %}

@@ -16,8 +16,11 @@ def posts(request):
     context = {'posts':posts}
     return render(request, 'base/posts.html', context)
 
-def post(request):
-    return render(request, 'base/post.html')
+def post(request, pk):
+    post = Post.objects.get(id=pk)
+
+    context = {'post': post}
+    return render(request, 'base/post.html', context)
 
 def profile(request):
     return render(request, 'base/profile.html')
