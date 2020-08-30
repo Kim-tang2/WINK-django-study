@@ -1,4 +1,4 @@
-"""wink_django_study URL Configuration
+"""wink_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,14 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-import myApp.views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', myApp.views.post_list, name='post_list'),
-    path('post/<int:pk>/', myApp.views.post_detail, name='post_detail'),
-    # path(경로, view에 정의된 함수, 이름)
-    path('post/new/', myApp.views.post_new, name='post_new'),
-    path('post/<int:pk>/edit/', myApp.views.post_edit, name='post_edit'),
+    path('', include('base.urls')),
 ]

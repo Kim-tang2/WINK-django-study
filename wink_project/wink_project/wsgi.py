@@ -1,5 +1,5 @@
 """
-WSGI config for wink_django_study project.
+WSGI config for wink_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wink_django_study.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wink_project.settings')
 
 application = get_wsgi_application()
