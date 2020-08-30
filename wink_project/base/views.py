@@ -54,3 +54,13 @@ def updatePost(request, pk):
 
     context = {'form': form}
     return render(request, 'base/post_form.html', context)
+
+@login_required(login_url="home")
+def deletePost(request, pk):
+	post = Post.objects.get(id=pk)
+
+	if request.method == 'POST':
+		post.delete()
+		return redirect('posts')
+	context = {'item':post}
+	return render(request, 'base/delete.html', context)

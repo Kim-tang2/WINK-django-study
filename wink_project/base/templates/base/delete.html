@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-container">
+	<form method="POST" action="">
+		{% csrf_token %}
+
+		<p>정말로 이 게시물을 지우시겠습니까 {{item}}?</p>
+		<a class="btn btn-primary" href="{% url 'posts' %}">&laquo 이전</a>
+		<input class="btn btn-danger" type="submit" value="확인">
+	</form>
+</div>
+
+{% endblock content %}
