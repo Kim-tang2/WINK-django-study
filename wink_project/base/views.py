@@ -5,10 +5,13 @@ from .models import Post
 # Create your views here.
 
 def home(request):
-    return render(request, 'base/index.html')
+    posts = Post.objects.filter(active=True, featured=True)[0:3]
+
+    context = {'posts':posts}
+    return render(request, 'base/index.html', context)
 
 def posts(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(active=True)
 
     context = {'posts':posts}
     return render(request, 'base/posts.html', context)
