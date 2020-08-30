@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Tang's Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+	<section class="s1">
+		<div class="main-container">
+			<div class="greeting-wrapper">
+				<h1>mara._.tang Life is Fuckin Hard...</h1>
+			</div>
+			
+			<div class="intro-wrapper">
+				{% include 'base/navbar.html' %}
+
+				<div class="left-column">
+					<img id="profile_pic" src="{% static 'images/tang.jpeg' %}">
+					<h5 style="text-align: center;line-height: 0;">Mara & Paper</h5>
+
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
+
+					<p id="settings-note">* 색상 테마를 고르실 수 있습니다</p>
+				</div>
+
+				<div class="right-column">
+
+					<div id="preview-shadow">
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>Who am I</h3>
+							<p>국민대학교 소프트웨어학부 17학번 김태훈입니다. 윙크의 기획차장입니다 ^0^. 악마같은 회장 때문에 참 힘드네요...</p>
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+
+			<div class="about-wrapper">
+				<div class="about-me">
+					<h4>More about me</h4>
+
+					<p>풀스택으로 서비스도 하나 하고 싶고 요즘은 안 하면 찐따라는 셀레니움을 이용한 크롤링도 해보고 싶고ㅠ_ㅠ 얼른 다 해보고 싶습니다!! 맞다 인공지능도 ㅋ</p>
+
+					<p>저는 이제야 철이 들어 그나마 열심히 살고 있습니다...^^ 현재 콘캣이라는 회사에서 스마트팜 대시보드를 만들고 있습니다. 꽤나 퀄리티 있어요 나중에 보여드릴게요.</p>
+
+
+					<hr>
+
+					<h4>Skills</h4>
+
+					<p>프론트엔드로 일하고 있지만 다음엔 백엔드로 인턴을 하고 싶어요! 얼른 기회가 왔음 좋겠네요.</p>
+					<div id="skills">
+						<ul>
+							<li>Dart</li>
+							<li>CPP</li>
+							<li>Java</li>
+							<li>Python</li>
+				
+						</ul>
+
+						<ul>
+							<li>Flutter</li>
+							<li>Android</li>
+							<li>Django</li>
+							<li>PhotoShop</li>
+						
+						</ul>
+
+					</div>
+
+				</div>
+
+				
+				<div class="social-links">
+					<img id="social_img" src="{% static 'images/wink.jpeg' %}">
+					<h3>Instagram & Github</h3>
+
+					<a target="_blank" href="https://www.instagram.com/_mara._.tang/">인스타그램: @mara._.tang</a>
+					<br>
+					<a target="_blank" href="https://github.com/Kim-tang2">깃허브: @kim-tang2</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s1">
+		<div class="main-container">
+			<h3 style="text-align: center;">
+				Fun things these days</h3>
+
+			<div class="post-wrapper">
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="{% static 'images/smartfarm.jpg' %}">
+						<div class="post-preview">
+							<h6 class="post-title">SmartFarm DashBoard in Flutter</h6>
+							<p class="post-intro">콘캣이라는 회사에서 플러터를 이용해 자동화 농장 제어와 대시보드 기능을 수행하는 모바일 앱을 만들고 있습니다.</p>
+							<a href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="{% static 'images/winkproject.jpeg' %}">
+						<div class="post-preview">
+							<h6 class="post-title">Wink Project - Soldier meal</h6>
+							<p class="post-intro">김급식을 이은 희대의 명작 군급식의 앱 프론트엔드를 맡고 있습니다. 재밌게 진행하고 있습니다 ^^</p>
+							<a href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="{% static 'images/love.jpeg' %}">
+						<div class="post-preview">
+							<h6 class="post-title">True Love</h6>
+							<p class="post-intro">정말 제대로 된 트루러브를 하고 있습니다...^^ 부럽죠?</p>
+							<a href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h3 style="text-align: center;">To kim-tang2</h3>
+
+			<form id="contact-form">
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
+	</section> 
+
+	<script type="text/javascript">
+		let static = "{% static 'css' %}"
+	</script>
+
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

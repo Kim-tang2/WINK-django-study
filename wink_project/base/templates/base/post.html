@@ -1,6 +1,11 @@
 {% extends 'base/main.html' %}
-
+{% load static %}
 {% block content %}
-<h1>this is post </h1> 
+<div class = "main-container">
+    <h1>this is post </h1>
+    
+    <img src="{% static 'images/tang.jpeg' %}">
 
+    <p>국민대학교 소프트웨어학부 17학번 김태훈입니다. 윙크의 기획차장입니다 ^0^. 악마같은 회장 때문에 참 힘드네요...</p>
+</div>
 {% endblock content %}
