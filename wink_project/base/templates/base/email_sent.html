@@ -1,0 +1,42 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<style type="text/css">
+	html, body{
+		height: 100%;
+	}
+
+	#page-wrapper{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #eaeaea;
+	}
+
+	#success-box{
+		max-width: 800px;
+		height: auto;
+		background-color: #fff;
+		border:1px solid #888;
+		border-radius: 5px;
+		padding: 15px;
+	}
+
+	#success-box p{
+		font-size: 18px;
+	}
+
+</style>
+
+<div id="page-wrapper">
+	<div id="success-box" class="content-block">
+		<h1>@iamfinetangyou</h1>
+		<p>소중한 의견을 남겨주셔서 아주 감사합니다. 빠른 시일내에 읽어보고 회신하겠습니다.</p>
+		<a id="back-btn" class="btn btn-success" href="{% url 'home' %}">돌아가기</a>
+	</div>
+</div>
+
+{% endblock content %}

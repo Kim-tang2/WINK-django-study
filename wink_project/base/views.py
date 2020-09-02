@@ -92,5 +92,4 @@ def sendEmail(request):
         email.fail_silently=False
         email.send()
 
-        # return render(request, 'base/email_sent.html')
-        return HttpResponse('email was sent')
+        return render(request, 'base/email_sent.html')
